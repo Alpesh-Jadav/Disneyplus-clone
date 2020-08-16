@@ -1,0 +1,94 @@
+ .language, .gray-card{
+    width: 220px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    
+}
+.gray-card {
+    height: 125px;
+    background: rgba(23,23,23,0.5);
+    position: absolute;
+
+}
+
+.mid-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+.mid-container img{
+    margin-bottom: 1px;
+    width: 70px;
+    z-index: 1;
+}
+.mid-container span{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    z-index: 1;
+}
+.language{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    background-image: url("https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/LANGUAGE/5710/5710/5710-h");
+    background-size: cover;
+   
+    
+}
+
+
+
+.whole-card:hover {
+    z-index: 1;
+    transform: scale(1.6);
+    transition: .3s ease-in;
+}
+
+.image-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+    .gray-card {
+        display: none;
+        
+    }
+
+}
+
+@media (max-width: 769px) {
+
+    .main-container {
+        width: 100% !important;
+        margin-top: 80px;
+    }
+
+
+    .language{
+        width: 150px;
+        margin-right: 13px;
+    }
+
+ 
+    .whole-card:hover {
+        z-index: 1;
+        transform: scale(1.13);
+        transition: .3s ease-in;
+    }
+    .whole-card:hover .mid-container span {
+        color: orangered;
+    }
+
+    .lastLanguage-card {
+        padding-bottom: 0;
+    }
+
+}

@@ -1,25 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import './App.css';
+import Navbar from './components/Navbar';
+import LandingPage from './components/LandingPage';
+import FooterPart from './components/FooterPart';
+import ChennelsScreen from './components/ChennelsScreen';
+import LanguagesScreen from './components/LanguagesScreen';
+import GenresScreen from './components/GenresScreen';
 
 function App() {
+
+        const [darkTheme , setDarkTheme] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+   
+    <Router>
+    <Switch>
+      <Route exact path="/">
+      <div className={ darkTheme ? `ultra-container light-dark` : `ultra-container`}>
+           <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+           <LandingPage darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+           <FooterPart darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+          </div>
+          
+        
+
+      </Route>
+      <Route exact path="/chennels">
+      <div className={ darkTheme ? `ultra-container light-dark` : `ultra-container`}>
+            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+           <ChennelsScreen />
+           <FooterPart darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </div>
+          
+      </Route>
+      <Route exact path="/languages">
+      <div className={ darkTheme ? `ultra-container light-dark` : `ultra-container`}>
+            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+           <LanguagesScreen />
+           <FooterPart darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </div>
+          
+      </Route>
+      <Route exact path="/genre">
+      <div className={ darkTheme ? `ultra-container light-dark` : `ultra-container`}>
+            <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme}/>
+           <GenresScreen />
+           <FooterPart darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      </div>
+          
+      </Route>
+    </Switch>
+    </Router>
+    
+    
   );
 }
 
