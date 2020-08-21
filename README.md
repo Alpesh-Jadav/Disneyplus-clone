@@ -1,8 +1,8 @@
 
 
- * This project is a clone of popular streaming plateform Disney+Hotstar.
+ This project is a clone of popular streaming plateform Disney+Hotstar.
 
- * In this project following are used:
+ In this project following are used:
 
     => material ui 
     => Reactjs
@@ -13,12 +13,13 @@
     => React Router
     
 
-* Many places image links of original web are used.
+Many places image links of original web are used.
 
 
-* additional dependencies *
+additional dependencies *
 
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
 
   
+you can lern how make web mobile friendly.
